@@ -54,7 +54,7 @@ export function ResponsiveDrawer(props) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar>
-        <PrimarySearchAppBar />
+        <PrimarySearchAppBar toggle={handleDrawerToggle}/>
       </AppBar>
       <Box
         component="nav"
