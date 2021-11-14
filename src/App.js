@@ -1,11 +1,11 @@
 import './App.css';
 import * as React from 'react';
-import { PrimarySearchAppBar } from './Search';
+import { ResponsiveDrawer } from './sidebar';
 
 function App() {
   return (
     <div className="App">
-      <PrimarySearchAppBar />
+      <ResponsiveDrawer />
     </div>
   );
 }

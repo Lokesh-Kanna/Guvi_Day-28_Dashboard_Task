@@ -19,3 +19,13 @@ code {
   padding-left: 1rem;
   border-left: 1px solid white;
 }
+
+.css-d9ml5t-MuiDrawer-docked .MuiDrawer-paper {
+  z-index: 1;
+}
+
+.drawer {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgb(68, 127, 238), rgb(53, 114, 150));
+  color: white !important;
+}
