@@ -80,3 +80,7 @@ code {
 #pieChart {
   display: flex;
 }
+
+#heading {
+  color: grey;
+}

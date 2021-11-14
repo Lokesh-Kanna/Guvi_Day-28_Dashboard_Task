@@ -26,7 +26,8 @@ export function Overview() {
     ]
   return (
     <div>
-      <h3>Dashboard</h3>
+      <h1 id="heading"><i><u>Dashboard</u></i></h1>
+      <hr></hr>
       <div id="mainoverviewbox">
           {['40,000', '215,000', '50', '18'].map((num, index) => {
               return (
