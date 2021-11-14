@@ -48,6 +48,7 @@ code {
 #mainoverview {
   display: flex !important;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem 0 0;
