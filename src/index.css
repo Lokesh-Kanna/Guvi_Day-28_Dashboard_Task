@@ -24,8 +24,46 @@ code {
   z-index: 1;
 }
 
+.css-k008qs {
+  display: inline-block;
+}
+
 .drawer {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgb(68, 127, 238), rgb(53, 114, 150));
   color: white !important;
+}
+
+#contentdisp {
+  display: flex;
+  margin-top: 4rem;
+}
+
+#mainoverviewbox {
+  display: flex;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+#mainoverview {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 0;
+}
+
+.contentflex {
+  display: flex !important;
+}
+
+.colorbar {
+  background-color: rgb(3, 151, 3) !important;
+  height: 5rem;
+  width:0.5rem;
+}
+
+#icon {
+  height: 2rem;
+  color: rgb(133, 133, 133);
 }

@@ -16,6 +16,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
+import { Overview } from './Overview';
 
 const drawerWidth = 240;
 export function ResponsiveDrawer(props) {
@@ -51,44 +52,51 @@ export function ResponsiveDrawer(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar>
-        <PrimarySearchAppBar toggle={handleDrawerToggle}/>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer className="drawer"
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-        <Drawer className="drawer"
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-    </Box>
+    <div id="contentdisp">
+      <div id="box">
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <AppBar>
+            <PrimarySearchAppBar toggle={handleDrawerToggle}/>
+          </AppBar>
+          <Box
+            component="nav"
+            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+            aria-label="mailbox folders"
+          >
+            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+            <Drawer className="drawer"
+              container={container}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: 'block', sm: 'none' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              }}
+            >
+              {drawer}
+            </Drawer>
+            <Drawer className="drawer"
+              variant="permanent"
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              }}
+              open
+            >
+              {drawer}
+            </Drawer>
+          </Box>
+        </Box>
+      </div>
+      <div id="overview">
+        <Overview />
+      </div>
+    </div>
   );
 }
 ResponsiveDrawer.propTypes = {
