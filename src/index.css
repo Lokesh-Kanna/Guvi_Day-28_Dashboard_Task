@@ -55,6 +55,7 @@ code {
 
 .contentflex {
   display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 .colorbar {
@@ -66,4 +67,15 @@ code {
 #icon {
   height: 2rem;
   color: rgb(133, 133, 133);
+}
+
+#chart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: 1.5rem !important;
+}
+
+#pieChart {
+  display: flex;
 }
