@@ -84,3 +84,31 @@ code {
 #heading {
   color: grey;
 }
+
+#progressandtext {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1rem 2rem 5rem 2rem;
+}
+
+.progresstitle {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.card-header {
+  color: rgb(97, 96, 96);
+}
+
+.cardText {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 2rem 1rem !important;
+  font-size: 1.2rem !important;
+}
+
+#developementcard {
+  height: 100%;
+}

@@ -6,7 +6,9 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import ForumIcon from '@mui/icons-material/Forum';
-import { Chart } from "react-google-charts";
+import { LineChart, PieChart } from './Charts';
+import { Progress } from './Progress';
+
 
 export function Overview() {
     const data = [
@@ -69,52 +71,23 @@ export function Overview() {
       <br></br>
       <div id="chart">
       <Card  sx={{ maxWidth: 750 }}>
+      <div class="card-header">
+            <h3><i>Earnings Overview</i></h3>
+        </div>
         <LineChart data={data}/>
         </Card>
         <Card  sx={{ maxWidth: 750 }}>
+        <div class="card-header">
+            <h3><i>Earnings Distribution</i></h3>
+        </div>
         <PieChart data={data}/>
         </Card>
-        
+    </div>
+    <br></br>
+    <div>
+    <Progress />
     </div>
     </div>
   );
 }
 
-function LineChart ({data}) {
-    return (
-        <Chart
-            width={'700px'}
-            height={'400px'}
-            chartType="LineChart"
-            loader={<div>Loading Chart</div>}
-            data={data}
-            options={{
-                hAxis: {
-                title: 'Time',
-                },
-                vAxis: {
-                title: 'Money',
-                },
-            }}
-            rootProps={{ 'data-testid': '1' }}
-            />
-    )
-}
-
-function PieChart ({data}) {
-    return (
-        <div id="pieChart">
-            <Chart
-                width={'700px'}
-                height={'500px'}
-                chartType="PieChart"
-                loader={<div>Loading Chart</div>}
-                data={data}
-                options={{
-                    title: 'Earning Distribution',
-                }}
-                rootProps={{ 'data-testid': '1' }}
-                />
-        </div>
-    )
-}

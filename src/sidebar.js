@@ -17,6 +17,8 @@ import InsertChartIcon from '@mui/icons-material/InsertChart';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import { Overview } from './Overview';
+import { Progress } from './Progress';
+
 
 const drawerWidth = 240;
 export function ResponsiveDrawer(props) {
@@ -106,3 +108,5 @@ ResponsiveDrawer.propTypes = {
    */
   window: PropTypes.func,
 };
+
+
